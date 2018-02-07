@@ -336,23 +336,21 @@ function guessing_game(guess)  // no display
      num = Math.random() * 100;  // Math.random() return a random number between 0 and 1
      num = Math.ceil(num);  // used floor thus getting 1 among 10000 samples
      num = (num % 10) + 1; // to generate number between 1 and 10
-     console.log("at i = " + i + ", num = " + num);
+     console.log("Random number : " + num);
    //}
 
-   if(guess === num)
-   {
-     return("Good Work");
-   }
-
-   else
-   {
-     return("Not matched");
-   }
+   
+    if(guess == num){
+      return("Well Played! Your guess was correct.\n");
+    } else{
+      return("Incorrect Guess!");
+    }
+  
 
 }
 
   console.log("Guessing Game:");
 
     var guess = prompt('Guess the number between 1 and 10 inclusive');
-    console.log("User guessed: "+ guess);
+    console.log("Your guessed: "+ guess);
    guessing_game(guess);
